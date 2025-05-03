@@ -8,7 +8,13 @@ export default function Navbar() {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav">
             <li className="nav-item"><Link className="nav-link" to="/">Dashboard</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/teachers">Teachers</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/students">Students</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/attendance">Attendance</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/exams">Exams</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/marks">Marks</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/reports">Reports</Link></li>
+
           </ul>
         </div>
       </div>
