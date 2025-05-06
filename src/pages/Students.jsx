@@ -20,7 +20,7 @@ export default function Students() {
     //   setStudents(students.map(s => s === editingStudent ? student : s));
     //   setEditingStudent(null);
     // } else {
-    //   setStudents([...students, student]);
+    //   setStud  ents([...students, student]);
     // }
     if (editingStudent) {
       // 🔄 UPDATE

@@ -1,10 +1,12 @@
+// Only minor additions to make sure form handles both create and edit:when adding crud
 import { useState, useEffect } from 'react';
 
 export default function TeacherForm({ onSubmit, editingTeacher, cancelEdit }) {
-  const [form, setForm] = useState({ name: '', subject: '', experience: '' });
+  const [form, setForm] = useState({ name: '', subject: '', experience: '', email: '' });
 
   useEffect(() => {
     if (editingTeacher) setForm(editingTeacher);
+    else setForm({ name: '', subject: '', experience: '', email:'' });
   }, [editingTeacher]);
 
   const handleChange = e => {
@@ -14,7 +16,7 @@ export default function TeacherForm({ onSubmit, editingTeacher, cancelEdit }) {
   const handleSubmit = e => {
     e.preventDefault();
     onSubmit(form);
-    setForm({ name: '', subject: '', experience: '' });
+    setForm({ name: '', subject: '', experience: '', email:'' });
   };
 
   return (
@@ -29,6 +31,9 @@ export default function TeacherForm({ onSubmit, editingTeacher, cancelEdit }) {
         </div>
         <div className="col">
           <input type="number" name="experience" className="form-control" placeholder="Years of Experience" value={form.experience} onChange={handleChange} required />
+        </div>
+        <div className="col">
+          <input type="email" name="email" className="form-control" placeholder="email" value={form.email} onChange={handleChange} required />
         </div>
       </div>
       <button className="btn btn-success me-2" type="submit">{editingTeacher ? 'Update' : 'Add'}</button>

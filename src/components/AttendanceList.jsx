@@ -14,8 +14,9 @@ export default function AttendanceList({ attendanceList, onEdit, onDelete }) {
           <tr><td colSpan="4" className="text-center">No attendance records</td></tr>
         ) : (
           attendanceList.map((attendance, i) => (
-            <tr key={i}>
-              <td>{attendance.studentName}</td>
+            // <tr key={i}>
+            <tr key={attendance.id || i}>
+              <td>{attendance.student}</td>
               <td>{attendance.date}</td>
               <td>{attendance.status}</td>
               <td>

@@ -27,7 +27,7 @@ const ReportGeneration = ({ data }) => {
           {data.map((item, index) => (
             <View key={index} style={styles.table}>
 
-<Text style={styles.cell}>{item.studentName}</Text>
+              <Text style={styles.cell}>{item.student}</Text>
               <Text style={styles.cell}>{item.subject}</Text>
               <Text style={styles.cell}>{item.marks}</Text>
             </View>

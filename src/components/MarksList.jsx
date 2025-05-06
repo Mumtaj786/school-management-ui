@@ -15,9 +15,11 @@ export default function MarksList({ marksList, onEdit, onDelete }) {
         {marksList.length === 0 ? (
           <tr><td colSpan="5" className="text-center">No marks added</td></tr>
         ) : (
-          marksList.map((mark, i) => (
-            <tr key={i}>
-              <td>{mark.studentName}</td>
+          // marksList.map((mark, i) => (
+          //   <tr key={i}>
+            marksList.map((mark) => (
+            <tr key={mark.id}>
+              <td>{mark.student}</td>
               <td>{mark.exam}</td>
               <td>{mark.subject}</td>
               <td>{mark.marks}</td>
